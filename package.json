@@ -1,0 +1,13 @@
+{
+  "name": "jankins",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "jest",
+    "build": "echo 'Building the app...'"
+  },
+  "author": "",
+  "license": "ISC"
+}

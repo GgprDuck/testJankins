@@ -14,19 +14,19 @@ pipeline {
         stage('Run Tests') {
             steps {
                 echo 'Running tests...'
-                sh 'npm test'
+                sh 'source $NVM_DIR/nvm.sh && nvm use $NODE_VERSION && npm test'
             }
         }
         stage('Build') {
             steps {
                 echo 'Building the application...'
-                sh 'npm run build'
+                sh 'source $NVM_DIR/nvm.sh && nvm use $NODE_VERSION && npm run build'
             }
         }
         stage('Start Application') {
             steps {
                 echo 'Starting the application...'
-                sh 'npm start &'
+                sh ' source $NVM_DIR/nvm.sh && nvm use $NODE_VERSION && npm start &'
             }
         }
     }

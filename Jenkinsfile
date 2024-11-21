@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    tools { nodejs "NodeJS 18" } // Replace with your NodeJS configuration name
+    tools { nodejs "NodeJS 18" }
     stages {
         stage('Install Dependencies') {
             steps {
@@ -15,11 +15,6 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'npm run build'
-            }
-        }
-        stage('Run Application') {
-            steps {
-                sh 'npm start'
             }
         }
     }

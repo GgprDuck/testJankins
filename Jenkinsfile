@@ -11,12 +11,6 @@ pipeline {
                 sh 'source $NVM_DIR/nvm.sh && nvm use $NODE_VERSION && npm install'
             }
         }
-        stage('Install Dependencies') {
-            steps {
-                echo 'Installing dependencies...'
-                sh 'npm install'
-            }
-        }
         stage('Run Tests') {
             steps {
                 echo 'Running tests...'
